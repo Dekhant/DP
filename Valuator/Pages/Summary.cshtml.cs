@@ -1,33 +1,50 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Globalization;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
+using Library;
 
 namespace Valuator.Pages
 {
-    public class SummaryModel : PageModel
+    public class Summary : PageModel
     {
-        private readonly ILogger<SummaryModel> _logger;
+        private readonly ILogger<Summary> _logger;
         private readonly IStorage _storage;
 
-        public SummaryModel(ILogger<SummaryModel> logger, IStorage storage)
+        public Summary(IStorage storage, ILogger<Summary> logger)
         {
-            _logger = logger;
             _storage = storage;
+            _logger = logger;
         }
 
         public double Rank { get; set; }
         public double Similarity { get; set; }
 
-        public void OnGet(string id)
+        private async Task<string> GetRankAsync(string id)
+        {
+            const int tryCount = 1000;
+            for (var i = 0; i < tryCount; i++)
+            {
+                var rank = _storage.Load(Constants.RankKeyPrefix + id);
+                if (rank != null)
+                    return rank;
+
+                await Task.Delay(10);
+            }
+
+            return null;
+        }
+
+        public async Task OnGetAsync(string id)
         {
             _logger.LogDebug(id);
 
-            Rank = Convert.ToDouble(_storage.Load("RANK-" + id.ToString()));
-            Similarity = Convert.ToDouble(_storage.Load("SIMILARITY-" + id.ToString()));
+            string rank;
+            if ((rank = await GetRankAsync(id)) != null)
+                Rank = double.Parse(rank, CultureInfo.InvariantCulture);
+            else
+                _logger.LogWarning("Could not get rank value for id: " + id);
+            Similarity = double.Parse(_storage.Load(Constants.SimilarityKeyPrefix + id), CultureInfo.InvariantCulture);
         }
     }
 }
