@@ -1,80 +1,47 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.Extensions.Logging;
+using Library;
 
 namespace Valuator.Pages
 {
     public class IndexModel : PageModel
     {
-        private readonly ILogger<IndexModel> _logger;
+        private readonly IMessageBroker _messageBroker;
         private readonly IStorage _storage;
 
-        public IndexModel(ILogger<IndexModel> logger, IStorage storage)
+        public IndexModel(IStorage storage, IMessageBroker messageBroker)
         {
-            _logger = logger;
             _storage = storage;
-        }
-
-        public void OnGet()
-        {
-
+            _messageBroker = messageBroker;
         }
 
         public IActionResult OnPost(string text)
         {
-            if(string.IsNullOrEmpty(text))
-            {
-                return Redirect("/");
-            }
+            if (string.IsNullOrEmpty(text)) Redirect("/");
 
-            _logger.LogDebug(text);
+            var id = Guid.NewGuid().ToString();
 
-            string id = Guid.NewGuid().ToString();
+            //Подсчёт similarity и сохранение в БД по ключу similarityKey
+            _storage.Store(Constants.SimilarityKeyPrefix + id, GetSimilarity(text).ToString());
 
-            string similarityKey = "SIMILARITY-" + id;
-            int similarity = GetSimilarity(text);
-            _storage.Store(similarityKey, similarity.ToString());
+            //Сохраение в БД
+            _storage.Store(Constants.TextKeyPrefix + id, text);
 
-            string textKey = "TEXT-" + id;
-            _storage.Store(textKey, text);
-
-            string rankKey = "RANK-" + id;
-            double rank = GetRank(text);
-            _logger.LogWarning(rank.ToString());
-            _storage.Store(rankKey, rank.ToString());
+            //Подсчёт rank и сохранение в БД по ключу rankKey
+            _messageBroker.Publish(Constants.RankKeyPrefix, id);
 
             return Redirect($"summary?id={id}");
         }
 
-        private double GetRank(string text)
-        {
-            int symbolsCount = 0;
-            foreach(var ch in text)
-            {
-                if(!Char.IsLetter(ch))
-                {
-                    symbolsCount++;
-                }
-            }
-            return Math.Round(((double)symbolsCount / text.Length), 3);
-        }
-
         private int GetSimilarity(string text)
         {
-            List<string> keys = _storage.GetKeys();
+            var keys = _storage.GetKeys();
 
-            foreach(string key in keys)
-            {
-                if(key.Substring(0, 5) == "TEXT-" && _storage.Load(key) == text)
-                {
-                    return 1;
-                }
-            }
-            return 0;
+            return keys.Any(item => item.Substring(0, 5) == Constants.TextKeyPrefix && _storage.Load(item) == text)
+                ? 1
+                : 0;
         }
     }
 }
