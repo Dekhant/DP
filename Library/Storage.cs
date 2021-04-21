@@ -8,10 +8,12 @@ namespace Library
     {
 
         private readonly IConnectionMultiplexer _connection;
+        private readonly string _hostName;
 
         public Storage()
         {
-            _connection = ConnectionMultiplexer.Connect(Constants.Host);
+            _hostName = Constants.HostName;
+            _connection = ConnectionMultiplexer.Connect(_hostName);
         }
 
         public void Store(string key, string value)
@@ -28,7 +30,7 @@ namespace Library
 
         public IEnumerable<string> GetKeys()
         {
-            return _connection.GetServer(Constants.Host, Constants.Port).Keys().Select(x => x.ToString()).ToList();
+            return _connection.GetServer(_hostName, Constants.Port).Keys().Select(x => x.ToString());
         }
 
         public bool IsKeyExist(string key)
