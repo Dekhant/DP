@@ -6,6 +6,7 @@ namespace Library
 {
     public class Storage : IStorage
     {
+
         private readonly IConnectionMultiplexer _connection;
 
         public Storage()

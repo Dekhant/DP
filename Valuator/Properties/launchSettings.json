@@ -3,11 +3,18 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:1933",
-      "sslPort": 44392
+      "applicationUrl": "http://localhost:21028",
+      "sslPort": 44330
     }
   },
   "profiles": {
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
     "Valuator": {
       "commandName": "Project",
       "dotnetRunMessages": "true",
