@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VAKuFUb13O7DvGL45iTv1KAJwLTNbJvf+AxosUv51zbcKVuXO3W5laomxE072lQFHnQn2wyDnsLgICtWxYdBnQ==",
+  "dgSpecHash": "/eSH//4tO3Xd/l1QghFO+FqvBTF/FPhU5Kwxu8BBmFqLCr6bnZCVueamawVdQR31VjEIcxC0PHUxdGIv13V7pg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\sasha\\source\\repos\\ds-2021-main\\RankCalculator\\RankCalculator.csproj",
+  "projectFilePath": "C:\\Users\\sasha\\source\\repos\\RankCalculator\\RankCalculator.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sasha\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "C:\\Users\\sasha\\.nuget\\packages\\microsoft.netcore.targets\\1.1.3\\microsoft.netcore.targets.1.1.3.nupkg.sha512",
@@ -98,9 +98,7 @@
     "C:\\Users\\sasha\\.nuget\\packages\\system.threading.timer\\4.3.0\\system.threading.timer.4.3.0.nupkg.sha512",
     "C:\\Users\\sasha\\.nuget\\packages\\system.windows.extensions\\5.0.0\\system.windows.extensions.5.0.0.nupkg.sha512",
     "C:\\Users\\sasha\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
-    "C:\\Users\\sasha\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\sasha\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
-    "C:\\Users\\sasha\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.12\\microsoft.netcore.app.host.win-x64.3.1.12.nupkg.sha512"
+    "C:\\Users\\sasha\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
   ],
   "logs": []
 }

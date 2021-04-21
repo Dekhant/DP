@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tGSmHhqoCvLyVnFtwglx223uCTQ903tJ0D3sSomL8aK6vZ3fXbzjGHZzGvhq3cA9bwq+C+McJi9/k4+874PJug==",
+  "dgSpecHash": "IiEfDcgLHFI6fd07dg0XSEK1dHATIqdTZ96DdpXpWvrFJwgRDpX4K7dFGLZT2U+sL7uj1OBcn9GVVCzfaUG1gg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\sasha\\source\\repos\\ds-2021-main\\Library\\Library.csproj",
+  "projectFilePath": "C:\\Users\\sasha\\source\\repos\\Library\\Library.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sasha\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "C:\\Users\\sasha\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
@@ -17,8 +17,7 @@
     "C:\\Users\\sasha\\.nuget\\packages\\system.security.cryptography.protecteddata\\5.0.0\\system.security.cryptography.protecteddata.5.0.0.nupkg.sha512",
     "C:\\Users\\sasha\\.nuget\\packages\\system.security.permissions\\5.0.0\\system.security.permissions.5.0.0.nupkg.sha512",
     "C:\\Users\\sasha\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
-    "C:\\Users\\sasha\\.nuget\\packages\\system.windows.extensions\\5.0.0\\system.windows.extensions.5.0.0.nupkg.sha512",
-    "C:\\Users\\sasha\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512"
+    "C:\\Users\\sasha\\.nuget\\packages\\system.windows.extensions\\5.0.0\\system.windows.extensions.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }
