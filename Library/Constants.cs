@@ -11,7 +11,9 @@ namespace Library
         public const string RankKeyProcessing = "valuator.processing.rank";
         public const string SimilarityKeyCalculated = "valuator.similarity_calculated";
         public const string RankKeyCalculated = "rank_calculator.rank_calculated";
-
+        public const string ShardIdRus = "DB_RUS";
+        public const string ShardIdEu = "DB_EU";
+        public const string ShardIdOther = "DB_OTHER";
         public static string HostName
         {
             get

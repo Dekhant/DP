@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using StackExchange.Redis;
 
@@ -7,35 +8,61 @@ namespace Library
     public class Storage : IStorage
     {
 
-        private readonly IConnectionMultiplexer _connection;
-        private readonly string _hostName;
+        private readonly IConnectionMultiplexer _connectionMain;
+        private readonly Dictionary<string, IConnectionMultiplexer> _connections;
 
         public Storage()
         {
-            _hostName = Constants.HostName;
-            _connection = ConnectionMultiplexer.Connect(_hostName);
+            _connectionMain = ConnectionMultiplexer.Connect(Constants.HostName);
+            _connections = new Dictionary<string, IConnectionMultiplexer>
+            {
+                {
+                    Constants.ShardIdRus,
+                    ConnectionMultiplexer.Connect(Environment.GetEnvironmentVariable(Constants.ShardIdRus))
+                },
+                {
+                    Constants.ShardIdEu,
+                    ConnectionMultiplexer.Connect(Environment.GetEnvironmentVariable(Constants.ShardIdEu))
+                },
+                {
+                    Constants.ShardIdOther,
+                    ConnectionMultiplexer.Connect(Environment.GetEnvironmentVariable(Constants.ShardIdOther))
+                }
+            };
         }
 
-        public void Store(string key, string value)
+        public void Store(string shard, string key, string value)
         {
-            var db = _connection.GetDatabase();
+            var db = _connections[shard].GetDatabase();
+            if (key.StartsWith(Constants.TextKeyPrefix)) db.SetAdd(Constants.TextKeyPrefix, value);
+
             db.StringSet(key, value);
         }
 
-        public string Load(string key)
+        public void StoreShard(string key, string shard)
         {
-            var db = _connection.GetDatabase();
+            _connectionMain.GetDatabase().StringSet(key, shard);
+        }
+
+        public string Load(string shard, string key)
+        {
+            var db = _connections[shard].GetDatabase();
             return db.StringGet(key);
         }
 
-        public IEnumerable<string> GetKeys()
+        public string LoadShard(string key)
         {
-            return _connection.GetServer(_hostName, Constants.Port).Keys().Select(x => x.ToString());
+            return _connectionMain.GetDatabase().StringGet(key);
         }
 
-        public bool IsKeyExist(string key)
+        public bool HasTextDuplicates(string text)
         {
-            var db = _connection.GetDatabase();
+            return _connections.Any(x => x.Value.GetDatabase().SetContains(Constants.TextKeyPrefix, text));
+        }
+
+        public bool IsKeyExist(string shard, string key)
+        {
+            var db = _connections[shard].GetDatabase();
             return db.KeyExists(key);
         }
     }

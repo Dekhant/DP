@@ -1,5 +1,5 @@
 ﻿using System.Text;
-using NATS.Client;
+using Library;
 
 namespace Valuator
 {
@@ -7,7 +7,7 @@ namespace Valuator
     {
         public void Publish(string key, string value)
         {
-            using var connection = new ConnectionFactory().CreateConnection();
+            using var connection = NatsFactory.GetNatsConnection();
             connection.Publish(key, Encoding.UTF8.GetBytes(value));
         }
     }
