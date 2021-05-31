@@ -6,6 +6,14 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v5.0": {
+      "Server/1.0.0": {
+        "dependencies": {
+          "Library": "1.0.0"
+        },
+        "runtime": {
+          "Server.dll": {}
+        }
+      },
       "Library/1.0.0": {
         "runtime": {
           "Library.dll": {}
@@ -14,6 +22,11 @@
     }
   },
   "libraries": {
+    "Server/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "Library/1.0.0": {
       "type": "project",
       "serviceable": false,
