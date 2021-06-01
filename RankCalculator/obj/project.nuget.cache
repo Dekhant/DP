@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7+65fjetYj8fXLFLLHgncp6Duji4Zs+fdTJiW5E/ln04crO3taBGIgNlmDykrQzr6UL3Ai0mS+NvhEoOOjGEGg==",
+  "dgSpecHash": "FkZaFIG2JV+HH+bJRpdfM+sldIuA9oYdFhUcjKf79qgiENkgJDMABDegBLAKVu3UYmaU24smdTYIHMraZb5xhA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\sasha\\source\\repos\\RankCalculator\\RankCalculator.csproj",
+  "projectFilePath": "C:\\6 semestr\\DP\\RankCalculator\\RankCalculator.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sasha\\.nuget\\packages\\microsoft.extensions.configuration\\5.0.0\\microsoft.extensions.configuration.5.0.0.nupkg.sha512",
     "C:\\Users\\sasha\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",

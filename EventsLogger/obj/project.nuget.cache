@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qgbR+KvCebKMU0A6hG2JwBRjgsEAEnQ/2dtgQZQXg+qzMZQZ9caBN8cu8J+2KMuD38h9LbipI7ssnlYUfHXfWA==",
+  "dgSpecHash": "QT4ddNgxk35Q9Xjxr/Kp4WPx2/FMjas4L1D+oTpFQ/3tIQZhxH7gmhDADiGlk/tx9EMsEReO/YB+wL16KmMulA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\sasha\\source\\repos\\EventsLogger\\EventsLogger.csproj",
+  "projectFilePath": "C:\\6 semestr\\DP\\EventsLogger\\EventsLogger.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sasha\\.nuget\\packages\\microsoft.extensions.configuration\\5.0.0\\microsoft.extensions.configuration.5.0.0.nupkg.sha512",
     "C:\\Users\\sasha\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",

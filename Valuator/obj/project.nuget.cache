@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ordh2rkx7m6c4LZooxEiXslzHKhwsiBw9W+Iy6poHNFtawRYReUFSBx4hW76+F4zsz0FXZSIvLz8EeVYQAKe6A==",
+  "dgSpecHash": "FBzAZedLuBO2a7IcTzAoX8eGVFqdsZpEEXxmuTc/Ai4wiuOSmgWBTxlAt65MtuwEk9C6z0JFSvViLMwEd9EI8A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\sasha\\source\\repos\\Valuator\\Valuator.csproj",
+  "projectFilePath": "C:\\6 semestr\\DP\\Valuator\\Valuator.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sasha\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "C:\\Users\\sasha\\.nuget\\packages\\microsoft.netcore.targets\\1.1.3\\microsoft.netcore.targets.1.1.3.nupkg.sha512",
