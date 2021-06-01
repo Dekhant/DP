@@ -46,3 +46,7 @@ C:\Users\sasha\source\repos\RankCalculator\bin\Debug\net5.0\Microsoft.Extensions
 C:\Users\sasha\source\repos\RankCalculator\bin\Debug\net5.0\Microsoft.Extensions.Options.dll
 C:\Users\sasha\source\repos\RankCalculator\bin\Debug\net5.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll
 C:\Users\sasha\source\repos\RankCalculator\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
+C:\Users\sasha\source\repos\RankCalculator\bin\Debug\net5.0\Library.deps.json
+C:\Users\sasha\source\repos\RankCalculator\bin\Debug\net5.0\Library.runtimeconfig.json
+C:\Users\sasha\source\repos\RankCalculator\bin\Debug\net5.0\Library.runtimeconfig.dev.json
+C:\Users\sasha\source\repos\RankCalculator\bin\Debug\net5.0\Library.exe

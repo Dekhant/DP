@@ -50,3 +50,7 @@ C:\Users\sasha\source\repos\Valuator\obj\Debug\net5.0\Valuator.dll
 C:\Users\sasha\source\repos\Valuator\obj\Debug\net5.0\ref\Valuator.dll
 C:\Users\sasha\source\repos\Valuator\obj\Debug\net5.0\Valuator.pdb
 C:\Users\sasha\source\repos\Valuator\obj\Debug\net5.0\Valuator.genruntimeconfig.cache
+C:\Users\sasha\source\repos\Valuator\bin\Debug\net5.0\Library.deps.json
+C:\Users\sasha\source\repos\Valuator\bin\Debug\net5.0\Library.runtimeconfig.json
+C:\Users\sasha\source\repos\Valuator\bin\Debug\net5.0\Library.runtimeconfig.dev.json
+C:\Users\sasha\source\repos\Valuator\bin\Debug\net5.0\Library.exe
