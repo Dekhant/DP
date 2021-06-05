@@ -1,0 +1,16 @@
+C:\6 semestr\DP\Chain\bin\Debug\net5.0\Chain.exe
+C:\6 semestr\DP\Chain\bin\Debug\net5.0\Chain.deps.json
+C:\6 semestr\DP\Chain\bin\Debug\net5.0\Chain.runtimeconfig.json
+C:\6 semestr\DP\Chain\bin\Debug\net5.0\Chain.runtimeconfig.dev.json
+C:\6 semestr\DP\Chain\bin\Debug\net5.0\Chain.dll
+C:\6 semestr\DP\Chain\bin\Debug\net5.0\ref\Chain.dll
+C:\6 semestr\DP\Chain\bin\Debug\net5.0\Chain.pdb
+C:\6 semestr\DP\Chain\obj\Debug\net5.0\Chain.csprojAssemblyReference.cache
+C:\6 semestr\DP\Chain\obj\Debug\net5.0\Chain.GeneratedMSBuildEditorConfig.editorconfig
+C:\6 semestr\DP\Chain\obj\Debug\net5.0\Chain.AssemblyInfoInputs.cache
+C:\6 semestr\DP\Chain\obj\Debug\net5.0\Chain.AssemblyInfo.cs
+C:\6 semestr\DP\Chain\obj\Debug\net5.0\Chain.csproj.CoreCompileInputs.cache
+C:\6 semestr\DP\Chain\obj\Debug\net5.0\Chain.dll
+C:\6 semestr\DP\Chain\obj\Debug\net5.0\ref\Chain.dll
+C:\6 semestr\DP\Chain\obj\Debug\net5.0\Chain.pdb
+C:\6 semestr\DP\Chain\obj\Debug\net5.0\Chain.genruntimeconfig.cache
